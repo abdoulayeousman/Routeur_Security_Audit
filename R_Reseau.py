@@ -37,8 +37,8 @@ code_test = None
 
 for port_http in ports_ouverts:
     print("[+] Essai sur le port {}".format(port_http))
-    content_type = test_http(cible, port_http)
-    url_test, code_test = telecharger_gatedesc(cible, port_http)
+    test_http(cible, port_http)
+    url_test, code_test, content_type = telecharger_gatedesc(cible, port_http)
     if code_test == 200:
         break
 else:
