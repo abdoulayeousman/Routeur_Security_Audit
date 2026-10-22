@@ -122,8 +122,7 @@ Fichiers générés dans le dossier courant :
 - **HTTP uniquement** : les requêtes utilisent `http://`, même sur le port 443 (HTTPS non géré).
 - **Ressource unique** : seul `/gatedesc.xml` est recherché ; les routeurs qui exposent leur description ailleurs ne sont pas détectés.
 - **Pas de validation de l'adresse IP** : une adresse invalide provoque simplement une erreur de connexion.
-- **Alerte non conditionnelle** : le message « Information d'identification exposée » s'affiche même si le XML ne contient pas l'information (les champs absents valent « Non trouvé »).
-- **Rapport simplifié** : seuls les ports ouverts sont listés (pas l'état de chaque port), et il n'y a pas de section « Conclusion ».
+- **Type de contenu du rapport** : la valeur « Content type » vient de la page d'accueil du service et non de `gatedesc.xml`.
 - **Fichier réécrit à chaque exécution** : `gatedesc.xml` et `router_audit.txt` sont écrasés.
 - **Outil pédagogique** : ce n'est pas un scanner de vulnérabilités complet.
 

@@ -18,13 +18,14 @@ if len(args) <2:
     sys.exit()
 
 cible = args[1]
+ports_testes = [21,80,443,49152,49153]
 
 print("===============================\n"
       "ROUTEUR SECURITY AUDIT\n"
       "==============================")
 print("Cible : ",cible)
 
-ports_ouverts = test_tcp(cible, [21,80,443,49152,49153])
+ports_ouverts = test_tcp(cible, ports_testes)
 
 if not ports_ouverts:
     print("Aucun port ouvert.")
@@ -50,6 +51,6 @@ peripherique, fabricant, modele, num_modele, serie, identifiant = extraire_infos
 
 fiche_routeur(peripherique, fabricant, modele, num_modele, serie, identifiant)
 
-analyse_xml(fabricant, modele, identifiant)
+exposee = analyse_xml(fabricant, modele, identifiant)
 
-rapport(cible, ports_ouverts, port_http, url_test, code_test, content_type, fabricant, modele, identifiant)
+rapport(cible, ports_testes, ports_ouverts, port_http, url_test, code_test, content_type, fabricant, modele, identifiant, exposee)

@@ -5,4 +5,7 @@ def analyse_xml(fabricant, modele, identifiant):
     print("Fabricant    : ",fabricant)
     print("Modéle       : ",modele)
     print("Identifiant de l'equipement: ",identifiant)
-    print("[!] Information d'identification Expose")
+    exposee = identifiant != "Non trouvé"
+    if exposee:
+        print("[!] Information d'identification Expose")
+    return exposee
