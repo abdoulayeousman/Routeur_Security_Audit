@@ -1,5 +1,5 @@
 def rapport(cible, ports_testes, ports_ouverts, port_http, url_test, code_test, content_type, fabricant, modele, identifiant, exposee):
-    file = open("router_audit.txt","a", encoding="utf-8")
+    file = open("router_audit.txt","w", encoding="utf-8")
     file.write("===========================\n"
                "Routeur SECURITY AUDIT\n"
                "===========================\n")

@@ -118,7 +118,7 @@ Fichiers générés dans le dossier courant :
 
 ## Limites du programme
 
-- **Un seul argument** : pas d'option pour choisir les ports, le timeout ou le fichier de sortie.
+- **Un seul argument, par choix** : l'outil se lance avec la seule adresse IP pour rester simple à utiliser. Les ports testés se modifient directement dans `R_Reseau.py`.
 - **Ports fixes** : la liste est écrite dans le code, et le scan est séquentiel (lent si les ports sont filtrés : 5 s de timeout par port).
 - **HTTP uniquement** : les requêtes utilisent `http://`, même sur le port 443 (HTTPS non géré).
 - **Ressource unique** : seul `/gatedesc.xml` est recherché ; les routeurs qui exposent leur description ailleurs ne sont pas détectés.
