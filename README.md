@@ -44,7 +44,7 @@ Prérequis : Python 3.6 ou plus récent.
 ```bash
 git clone https://github.com/abdoulayeousman/Routeur_Security_Audit.git
 cd Routeur_Security_Audit
-pip install requests
+pip install -r requirements.txt
 ```
 
 Les modules `sys`, `socket` et `xml.etree.ElementTree` font partie de la bibliothèque standard de Python : il n'y a rien d'autre à installer.
