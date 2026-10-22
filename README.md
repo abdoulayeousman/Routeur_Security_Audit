@@ -122,10 +122,8 @@ Fichiers générés dans le dossier courant :
 - **HTTP uniquement** : les requêtes utilisent `http://`, même sur le port 443 (HTTPS non géré).
 - **Ressource unique** : seul `/gatedesc.xml` est recherché ; les routeurs qui exposent leur description ailleurs ne sont pas détectés.
 - **Pas de validation de l'adresse IP** : une adresse invalide provoque simplement une erreur de connexion.
-- **Type de contenu du rapport** : la valeur « Content type » vient de la page d'accueil du service et non de `gatedesc.xml`.
-- **Fichier réécrit à chaque exécution** : `gatedesc.xml` et `router_audit.txt` sont écrasés.
+- **Fichiers réécrits à chaque exécution** : `gatedesc.xml` et `router_audit.txt` sont écrasés.
 - **Outil pédagogique** : ce n'est pas un scanner de vulnérabilités complet.
-
 ## Fichier `.gitignore` conseillé
 
 ```
