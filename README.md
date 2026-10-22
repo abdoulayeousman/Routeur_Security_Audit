@@ -24,6 +24,7 @@ Le but est de comprendre comment une information apparemment cachée peut être 
 |---|---|
 | `R_Reseau.py` | Programme principal, appelle toutes les étapes |
 | `usage.py` | Affiche l'aide si l'argument est absent |
+| `valider_ip.py` | Vérifie que l'argument est une adresse IP valide |
 | `test_tcp.py` | Teste les ports TCP, retourne la liste des ports ouverts |
 | `test_http.py` | Requête HTTP sur `http://<cible>:<port>/` |
 | `telecharger_gatedesc.py` | Télécharge `http://<cible>:<port>/gatedesc.xml` et l'enregistre |
@@ -121,7 +122,6 @@ Fichiers générés dans le dossier courant :
 - **Ports fixes** : la liste est écrite dans le code, et le scan est séquentiel (lent si les ports sont filtrés : 5 s de timeout par port).
 - **HTTP uniquement** : les requêtes utilisent `http://`, même sur le port 443 (HTTPS non géré).
 - **Ressource unique** : seul `/gatedesc.xml` est recherché ; les routeurs qui exposent leur description ailleurs ne sont pas détectés.
-- **Pas de validation de l'adresse IP** : une adresse invalide provoque simplement une erreur de connexion.
 - **Fichiers réécrits à chaque exécution** : `gatedesc.xml` et `router_audit.txt` sont écrasés.
 - **Outil pédagogique** : ce n'est pas un scanner de vulnérabilités complet.
 ## Fichier `.gitignore` conseillé

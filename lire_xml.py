@@ -1,4 +1,3 @@
-import sys
 import xml.etree.ElementTree as ET
 
 def lire_xml():
@@ -6,9 +5,9 @@ def lire_xml():
         tree = ET.parse('gatedesc.xml')
         root = tree.getroot()
     except ET.ParseError as error:
-        print(f"Erreur d'ouverture: {error}")
-        sys.exit()
+        print(f"[!] XML invalide : {error}")
+        return None
     except FileNotFoundError:
-        print("Fichier introuvable.")
-        sys.exit()
+        print("[!] Fichier gatedesc.xml introuvable.")
+        return None
     return tree

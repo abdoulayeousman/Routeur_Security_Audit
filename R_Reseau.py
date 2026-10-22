@@ -1,6 +1,7 @@
 import sys
 
 from usage import usage
+from valider_ip import valider_ip
 from test_tcp import test_tcp
 from test_http import test_http
 from telecharger_gatedesc import telecharger_gatedesc
@@ -18,6 +19,10 @@ if len(args) <2:
     sys.exit()
 
 cible = args[1]
+
+if not valider_ip(cible):
+    sys.exit()
+
 ports_testes = [21,80,443,49152,49153]
 
 print("===============================\n"
@@ -46,6 +51,10 @@ else:
     sys.exit()
 
 tree = lire_xml()
+
+if tree is None:
+    print("Impossible d'analyser le fichier gatedesc.xml.")
+    sys.exit()
 
 peripherique, fabricant, modele, num_modele, serie, identifiant = extraire_infos(tree)
 
