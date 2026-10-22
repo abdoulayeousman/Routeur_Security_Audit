@@ -19,7 +19,7 @@ Les réponses ci-dessous s'appuient sur les résultats obtenus en exécutant le 
 
 Ports testés par mon programme : `21, 80, 443, 49152, 49153`.
 
-> Le sujet cite `44152` et `44153`. Mon programme teste `49152` et `49153`, qui sont les ports utilisés par mon routeur pour ce service.
+>Mon programme teste `49152` et `49153`, qui sont les ports utilisés par mon routeur pour ce service.
 
 **1. Quels ports sont ouverts ?**
 
