@@ -41,8 +41,8 @@ Tous les fichiers doivent rester **dans le même dossier**.
 Prérequis : Python 3.6 ou plus récent.
 
 ```bash
-git clone https://github.com/<votre-utilisateur>/<nom-du-depot>.git
-cd <nom-du-depot>
+git clone https://github.com/abdoulayeousman/Routeur_Security_Audit.git
+cd Routeur_Security_Audit
 pip install requests
 ```
 
